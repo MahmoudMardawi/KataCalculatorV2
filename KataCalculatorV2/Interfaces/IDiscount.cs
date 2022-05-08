@@ -11,5 +11,6 @@ namespace KataCalculatorV2.Interfaces
         public double discountValue(CalculatorModels calculator);
         public double discountAmount(CalculatorModels calculator);
         public double priceAfterdiscount(CalculatorModels calculator);
+
     }
 }
