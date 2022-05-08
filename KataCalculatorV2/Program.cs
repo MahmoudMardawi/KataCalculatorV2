@@ -1,6 +1,4 @@
-﻿using KataCalculatorV2.Modules;
-using KataCalculatorV2.Services;
-using System;
+﻿using System;
 
 namespace KataCalculatorV2
 {
@@ -8,13 +6,7 @@ namespace KataCalculatorV2
     {
         static void Main(string[] args)
         {
-            CalculatorModules calculatorModules = new CalculatorModules();
-            Tax tax = new Tax();
-            PrintInfo printInfo = new PrintInfo(tax);
-            DataInputUtilities.dataInputUtilities(calculatorModules);
-
-            printInfo.Print(calculatorModules);
-            
+            Console.WriteLine("Hello World!");
         }
     }
 }
