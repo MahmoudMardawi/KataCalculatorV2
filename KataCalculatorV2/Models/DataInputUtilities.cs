@@ -14,6 +14,7 @@ namespace KataCalculatorV2.Modules
             calculator.price = 25;
             calculator.UPC = 1234;
             calculator.ProductName = "TEST";
+
         }
     }
 }

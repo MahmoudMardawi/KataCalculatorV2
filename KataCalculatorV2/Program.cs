@@ -7,12 +7,12 @@ namespace KataCalculatorV2
     {
         static void Main(string[] args)
         {
-            CalculatorModules calculatorModules = new CalculatorModules();
+            CalculatorModels calculatorModels = new CalculatorModels();
             Tax tax = new Tax();
             PrintInfo printInfo = new PrintInfo(tax);
-            DataInputUtilities.dataInputUtilities(calculatorModules);
+            DataInputUtilities.dataInputUtilities(calculatorModels);
 
-            printInfo.Print(calculatorModules);
+            printInfo.Print(calculatorModels);
         }
     }
 }
