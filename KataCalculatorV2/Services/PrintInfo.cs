@@ -15,7 +15,7 @@ namespace KataCalculatorV2.Services
             this.tax = tax;
         }
 
-        public void Print(CalculatorModules calculator)
+        public void Print(CalculatorModels calculator)
         {
             PrintInfo printInfo = new PrintInfo(tax);
 
