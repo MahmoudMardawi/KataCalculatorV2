@@ -8,13 +8,19 @@ namespace KataCalculatorV2.Modules
 {
     internal class DataInputUtility
     {
-        public static void dataInputUtilities(CalculatorModels calculator)
+        public static CalculatorModel dataInputUtility()
         {
-            calculator.taxValue = 17.5;
-            calculator.price = 25;
-            calculator.UPC = 1234;
-            calculator.discountValue = 20;
-            calculator.ProductName = "TEST";
+            return new CalculatorModel
+            {
+                taxValue = 17,
+                ProductName = "Test",
+                UPC = 1234,
+                price = 25,
+                discountValue = 25
+
+
+            };
+
 
         }
     }
