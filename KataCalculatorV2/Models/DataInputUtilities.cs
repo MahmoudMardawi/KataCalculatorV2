@@ -13,6 +13,7 @@ namespace KataCalculatorV2.Modules
             calculator.taxValue = 17.5;
             calculator.price = 25;
             calculator.UPC = 1234;
+            calculator.discountValue = 20;
             calculator.ProductName = "TEST";
 
         }
