@@ -8,7 +8,6 @@ namespace KataCalculatorV2.Interfaces
 {
     internal interface IDiscount
     {
-        public double discountValue(CalculatorModels calculator);
         public double discountAmount(CalculatorModels calculator);
         public double priceAfterdiscount(CalculatorModels calculator);
 
