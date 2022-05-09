@@ -8,8 +8,9 @@ namespace KataCalculatorV2
         static void Main(string[] args)
         {
             CalculatorModels calculatorModels = new CalculatorModels();
+            Discount discount = new Discount();
             Tax tax = new Tax();
-            PrintInfo printInfo = new PrintInfo(tax);
+            PrintInfo printInfo = new PrintInfo(tax,discount);
             DataInputUtilities.dataInputUtilities(calculatorModels);
 
             printInfo.Print(calculatorModels);
