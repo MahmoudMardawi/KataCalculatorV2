@@ -22,7 +22,7 @@ namespace KataCalculatorV2.Services
         //    this.discount = discount;
         //}
 
-        public void Print(CalculatorModels calculator)
+        public void Print(CalculatorModel calculator)
         {
             double priceAfterTax = tax.priceAfterTax(calculator);
             double taxAmount = tax.TaxAmount(calculator);
