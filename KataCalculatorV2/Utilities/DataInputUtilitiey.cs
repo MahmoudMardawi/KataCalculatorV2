@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace KataCalculatorV2.Modules
 {
-    internal class DataInputUtilities
+    internal class DataInputUtilitiey
     {
         public static void dataInputUtilities(CalculatorModels calculator)
         {
-            calculator.taxValue = 17.5;
-            calculator.price = 25;
+            calculator.ProductName = "Test";
+            calculator.taxValue = 17.3;
+            calculator.price = 25.0;
             calculator.UPC = 1234;
-            calculator.ProductName = "TEST";
-
+            calculator.discountValue = 15.0;
         }
     }
 }
