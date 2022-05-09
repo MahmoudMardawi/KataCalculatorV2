@@ -11,7 +11,7 @@ namespace KataCalculatorV2
             Discount discount = new Discount();
             Tax tax = new Tax();
             PrintInfo printInfo = new PrintInfo(tax,discount);
-            DataInputUtilities.dataInputUtilities(calculatorModels);
+            DataInputUtility.dataInputUtilities(calculatorModels);
 
             printInfo.Print(calculatorModels);
         }
