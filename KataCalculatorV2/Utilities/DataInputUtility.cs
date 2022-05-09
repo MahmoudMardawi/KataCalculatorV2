@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KataCalculatorV2.Modules
 {
-    internal class DataInputUtilities
+    internal class DataInputUtility
     {
         public static void dataInputUtilities(CalculatorModels calculator)
         {
