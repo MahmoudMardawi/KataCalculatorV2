@@ -8,8 +8,8 @@ namespace KataCalculatorV2
 {
     internal interface ITax
     {
-        public double priceAfterTax(CalculatorModels calculator);
-        public double TaxAmount(CalculatorModels calculator);
+        public double priceAfterTax(CalculatorModel calculator);
+        public double TaxAmount(CalculatorModel calculator);
 
     }
 }
