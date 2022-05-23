@@ -17,9 +17,12 @@ namespace KataCalculatorV2
 
             Discount discount = new Discount();
             Tax tax = new Tax();
-            PrintInfo printInfo = new PrintInfo(tax,discount);
+            ProductInfo productInfo = new ProductInfo(calculatorModels);
 
-            printInfo.Print(PriceDetails);
+            Calculator calculator = new Calculator(productInfo);
+            PrintInfo printInfo = new PrintInfo(calculator,productInfo);
+            printInfo.Print();
+            
         }
     }
 }
