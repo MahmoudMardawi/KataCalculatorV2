@@ -9,29 +9,22 @@ namespace KataCalculatorV2.Services
 {
     internal class PrintInfo
     {
-        ITax tax;
-        IDiscount discount;
-
-        public PrintInfo(ITax tax, IDiscount discount)
+        Calculator calculator;
+        IProductInfo productInfo;
+        public PrintInfo (Calculator calculator, IProductInfo productInfo)
         {
-            this.tax = tax;
-            this.discount = discount;
+            this.calculator = calculator;
+            this.productInfo = productInfo;
         }
-        //public PrintInfo(IDiscount discount)
-        //{
-        //    this.discount = discount;
-        //}
 
-        public void Print(CalculatorModel calculator)
+        public void Print()
         {
-            double priceAfterTax = tax.priceAfterTax(calculator);
-            double taxAmount = tax.TaxAmount(calculator);
-            double discountAmount = discount.discountAmount(calculator);
-            double totalPrice = priceAfterTax - discountAmount;
-            Console.WriteLine($"Book name = {calculator.ProductName} , UPC = {calculator.UPC} , Price = {calculator.price.ToString("C2")}\n"+
-                $"Tax = {calculator.taxValue}%, Discount = {calculator.discountValue}%, Tax Amount = {taxAmount.ToString("C2")}" +
-                $", Discount Amount = {discountAmount.ToString("C2")}\n" +
-                $"Price before = {calculator.price.ToString("C2")}, Price after = {totalPrice.ToString("C2")}");
+
+            Console.WriteLine($"Book name = {productInfo.ProductName()} , UPC = {productInfo.UPC()} , Price = {productInfo.Price()}\n"+
+   $"Tax = {productInfo.TaxValue()}%, Discount = {productInfo.DiscountValue()}% "+
+                $", Tax Amount = {calculator.TaxAmount().ToString("C2")}" +
+                $", Discount Amount = {calculator.DiscountAmount().ToString("C2")}\n" +
+                $"Price before = {productInfo.Price().ToString("C2")}, Price after = {calculator.TotalPrice().ToString("C2")}");
         }
     }
 }

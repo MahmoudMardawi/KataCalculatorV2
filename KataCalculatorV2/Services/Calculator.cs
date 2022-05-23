@@ -9,24 +9,34 @@ namespace KataCalculatorV2.Services
 {
     internal class Calculator
     {
-        ITax tax;
-        IDiscount discount;
-        public Calculator(ITax tax, IDiscount discount)
-        {
-            this.tax = tax;
-            this.discount = discount;
-        }
-        public decimal PriceAfterTax(CalculatorModel calculatorModel)
-        {
-            decimal result = tax.priceAfterTax(calculatorModel);
-            return result;
-        }
-        public decimal TaxAmount(CalculatorModel calculatorModel)
-        {
-            decimal result = tax.TaxAmount(calculatorModel);
-            return result;
-        } 
-        public decimal 
        
+        IProductInfo productInfo;
+        public Calculator(IProductInfo productInfo)
+        {
+   
+            this.productInfo = productInfo;
+        }
+        public decimal PriceAfterTax()
+        {
+            decimal result = TaxAmount() + productInfo.Price();
+            return result;
+        }
+        public decimal TaxAmount()
+        {
+            return productInfo.TaxValue() * productInfo.Price() / 100;
+        } 
+        public decimal PriceAfterDiscount()
+        {
+            return  productInfo.Price() - DiscountAmount();
+          
+        } 
+        public decimal DiscountAmount()
+        {
+            return productInfo.Price() * productInfo.DiscountValue()/100;
+        }
+        public decimal TotalPrice()
+        {
+            return productInfo.Price() + TaxAmount() - DiscountAmount();
+        }
     }
 }
