@@ -8,7 +8,7 @@ namespace KataCalculatorV2
 {
     internal class Tax : ITax
     {
-        public  double priceAfterTax(CalculatorModel calculator) => (calculator.price*calculator.taxValue / 100) + calculator.price;
-        public  double TaxAmount(CalculatorModel calculator) => calculator.price * calculator.taxValue / 100;
+        public  decimal priceAfterTax(CalculatorModel calculator) => (calculator.Price*calculator.TaxValue / 100) + calculator.Price;
+        public  decimal TaxAmount(CalculatorModel calculator) => calculator.Price * calculator.TaxValue / 100;
     }
 }
