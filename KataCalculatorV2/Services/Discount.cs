@@ -9,7 +9,11 @@ namespace KataCalculatorV2.Services
 {
     internal class Discount : IDiscount
     {
-        public double discountAmount(CalculatorModel calculator) => calculator.price * calculator.discountValue / 100; 
-        public double priceAfterdiscount(CalculatorModel calculator) => discountAmount(calculator)-calculator.price;
+        decimal UniversalDiscount { get; set; };
+
+        // List<Decimla> GetProductDiscount(Product/UPC) =>
+        // {if (Unversta >  rsult.Add(UniversalDiscount) , Dict.Contains(UPC) 
+
+
     }
 }

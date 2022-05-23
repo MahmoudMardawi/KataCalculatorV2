@@ -8,11 +8,18 @@ namespace KataCalculatorV2
         static void Main(string[] args)
         {
             CalculatorModel calculatorModels = DataInputUtility.dataInputUtility();
+            // Product Object. => Product Main Details (Name, UPC, Price). 
+            // Calcolator (DiscountService, TaxService)  => 
+            // Calculator.CalculatePruice(Product) => PriceDetails (FinalPrice, Discount, Tax) 
+            // Printer => printPriceDetails. 
+            
+            // 
+
             Discount discount = new Discount();
             Tax tax = new Tax();
             PrintInfo printInfo = new PrintInfo(tax,discount);
 
-            printInfo.Print(calculatorModels);
+            printInfo.Print(PriceDetails);
         }
     }
 }
