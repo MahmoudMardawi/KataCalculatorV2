@@ -12,12 +12,11 @@ namespace KataCalculatorV2.Modules
         {
             return new CalculatorModel
             {
-                taxValue = 17,
+                TaxValue = 17,
                 ProductName = "Test",
                 UPC = 1234,
-                price = 25,
-                discountValue = 25
-
+                Price = 25,
+                DiscountValue = 25
 
             };
 

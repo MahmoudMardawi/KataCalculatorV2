@@ -8,10 +8,10 @@ namespace KataCalculatorV2
 {
     internal class CalculatorModel
     {
-        public double taxValue { get; set; }
+        public decimal TaxValue { get; set; }
         public string ProductName { get; set; }
         public int UPC { set; get; }
-        public double price { set; get; }
-        public double discountValue { get; set; }
+        public decimal Price { set; get; }
+        public decimal DiscountValue { get; set; }
     }
 }
