@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KataCalculatorV2
 {
-    internal class CalculatorModel
+    public class CalculatorModel
     {
         public decimal TaxValue { get; set; }
         public string ProductName { get; set; }
