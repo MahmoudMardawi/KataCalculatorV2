@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KataCalculatorV2.Interfaces
 {
-    internal interface IProductInfo
+    public interface IProductInfo
     {
         public string ProductName();
         public decimal Price();
