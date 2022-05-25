@@ -7,19 +7,22 @@ using System.Threading.Tasks;
 
 namespace KataCalculatorV2.Services
 {
-    internal class Calculator
+    public class Calculator : ICalculator
     {
        
         IProductInfo productInfo;
+        
+
         public Calculator(IProductInfo productInfo)
         {
-   
             this.productInfo = productInfo;
         }
+
+        
+
         public decimal PriceAfterTax()
         {
-            decimal result = TaxAmount() + productInfo.Price();
-            return result;
+           return TaxAmount() + productInfo.Price();
         }
         public decimal TaxAmount()
         {

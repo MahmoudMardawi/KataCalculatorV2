@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace KataCalculatorV2.Services
 {
-    internal class ProductInfo : IProductInfo
+    public class ProductInfo : IProductInfo
     {
-        CalculatorModel calculatorModel;
+        private readonly CalculatorModel calculatorModel;
         public ProductInfo(CalculatorModel calculatorModel)
         {
             this.calculatorModel = calculatorModel;

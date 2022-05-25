@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace KataCalculatorV2.Services
 {
-    internal class PrintInfo
+    public class PrintInfo
     {
-        Calculator calculator;
+        ICalculator calculator;
         IProductInfo productInfo;
-        public PrintInfo (Calculator calculator, IProductInfo productInfo)
+        public PrintInfo (ICalculator calculator, IProductInfo productInfo)
         {
             this.calculator = calculator;
             this.productInfo = productInfo;
@@ -21,7 +21,7 @@ namespace KataCalculatorV2.Services
         {
 
             Console.WriteLine($"Book name = {productInfo.ProductName()} , UPC = {productInfo.UPC()} , Price = {productInfo.Price()}\n"+
-   $"Tax = {productInfo.TaxValue()}%, Discount = {productInfo.DiscountValue()}% "+
+                $"Tax = {productInfo.TaxValue()}%, Discount = {productInfo.DiscountValue()}% "+
                 $", Tax Amount = {calculator.TaxAmount().ToString("C2")}" +
                 $", Discount Amount = {calculator.DiscountAmount().ToString("C2")}\n" +
                 $"Price before = {productInfo.Price().ToString("C2")}, Price after = {calculator.TotalPrice().ToString("C2")}");
